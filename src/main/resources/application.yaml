@@ -1,0 +1,16 @@
+spring:
+  main:
+    banner-mode: "off"
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/hackernews-db
+    username: admin
+    password: admin@123
+  jpa:
+    show-sql: false
+    spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+hackernews:
+  api:
+    url: "https://hacker-news.firebaseio.com/v0/"
