@@ -34,6 +34,7 @@ public class TopStoriesService {
                 if (story == null) {
                     story = hackerNewsApiClient.getStory(topStoryIds.get(i));
                     if (story != null) {
+                        story.setKids(null);
                         storyRepository.save(story);
                     }
                 }

@@ -1,5 +1,6 @@
 package com.questionpro.hackernews.api.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -31,6 +32,7 @@ public class Story {
     private String by;
 
     @Transient
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private List<Long> kids;
 }
 
